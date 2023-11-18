@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <string.h>
-#include "library.h"
-#include "logsystem.h"
+#include "headers/library.h"
+#include "headers/logsystem.h"
+#include "headers/login.h"
 
 int main() {
     struct Library library;
@@ -10,12 +11,21 @@ int main() {
     struct LogSystem log_system;
     log_system.num_logs = 0;
 
+    struct UserDB users;
+    users.num_users = 0;
+
     int book_ids = 1;
+
+    signUp(&users, "Naad", "1234");
+    signUp(&users, "user2", "password2");
+    signUp(&users, "user3", "password3");
+
+    auth: auth(users);
 
     printf("--------------------------------------\n");
     printf("\tLIBRARY MANAGEMENT\n");
     printf("--------------------------------------\n");
-    printf("\n1: Check in book\n2: Return book\n3: Display logs\n4: Insert Book into Library\n5: Check Availability of a Book\n6: Display Library\n0: Exit\n\n");
+    printf("\n1: Check in book\n2: Return book\n3: Display logs\n4: Insert Book into Library\n5: Check Availability of a Book\n6: Display Library\n7: Sign Out\n0: Exit\n\n");
     printf("--------------------------------------\n");
 
     while (1) {
@@ -75,6 +85,9 @@ int main() {
             case 6: {
                 display_library(&library, &log_system);
                 break;
+            }
+            case 7: {
+                goto auth;
             }
             case 0:
                 return 0;

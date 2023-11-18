@@ -1,5 +1,5 @@
-#include "library.h"
-#include "logsystem.h"
+#include "../headers/library.h"
+#include "../headers/logsystem.h"
 #include <stdio.h>
 #include <string.h>
 

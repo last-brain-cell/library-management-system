@@ -4,7 +4,10 @@ project(untitled C)
 set(CMAKE_C_STANDARD 23)
 
 add_executable(untitled main.c
-        library.h
-        logsystem.h
-        library.c
-        logsystem.c)
+        headers/library.h
+        headers/logsystem.h
+        Auxilary_Files/library.c
+        Auxilary_Files/logsystem.c
+        headers/login.h
+        Auxilary_Files/login.c
+)

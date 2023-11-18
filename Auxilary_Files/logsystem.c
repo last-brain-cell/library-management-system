@@ -1,4 +1,4 @@
-#include "logsystem.h"
+#include "../headers/logsystem.h"
 #include <stdio.h>
 #include <string.h>
 
