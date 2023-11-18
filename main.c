@@ -17,11 +17,15 @@ int main() {
     int book_ids = 1;
 
     signUp(&users, "Naad", "1234");
-    signUp(&users, "user2", "password2");
-    signUp(&users, "user3", "password3");
+    signUp(&users, "admin1", "admin1234");
+    signUp(&users, "admin2", "admin1357");
 
     int flag;
     auth: flag = auth(users);
+
+    if (flag == 0) {
+        goto end;
+    }
 
     printf("--------------------------------------\n");
     printf("\tLIBRARY MANAGEMENT\n");
@@ -54,10 +58,9 @@ int main() {
                 break;
             }
             case 4: {
-                char book_name[100];
-                char author[100];
+                char book_name[MAX_BOOK_NAME_LENGTH];
+                char author[MAX_AUTHOR_LENGTH];
                 int pages;
-                getchar();  // Consume the newline character left in the buffer
                 printf("\nEnter book name: ");
                 fgets(book_name, sizeof(book_name), stdin);
                 printf("\nEnter book author: ");

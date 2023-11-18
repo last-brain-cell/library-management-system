@@ -4,6 +4,8 @@
 #include "logsystem.h"
 
 #define MAX_BOOKS 100
+#define MAX_BOOK_NAME_LENGTH 100
+#define MAX_AUTHOR_LENGTH 100
 
 struct Book {
     int id;

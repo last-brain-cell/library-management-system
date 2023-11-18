@@ -56,7 +56,7 @@ int auth(struct UserDB users){
             } else {
                 printf("User database is full. Cannot sign up.\n");
             }
-            break;
+            return 1;
         }
         case 2: {
             char enteredUsername[MAX_USERNAME_LENGTH];
@@ -73,12 +73,12 @@ int auth(struct UserDB users){
                 printf("Incorrect username or password. Please try again.\n");
                 goto auth;
             }
-            break;
+            return 1;
         }
         case 0:
             return 0;
         default:
             printf("Invalid command. Please try again.\n");
     }
-    return -1;
+    return 0;
 }
