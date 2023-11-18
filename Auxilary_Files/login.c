@@ -80,4 +80,5 @@ int auth(struct UserDB users){
         default:
             printf("Invalid command. Please try again.\n");
     }
+    return -1;
 }

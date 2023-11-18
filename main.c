@@ -20,7 +20,8 @@ int main() {
     signUp(&users, "user2", "password2");
     signUp(&users, "user3", "password3");
 
-    auth: auth(users);
+    int flag;
+    auth: flag = auth(users);
 
     printf("--------------------------------------\n");
     printf("\tLIBRARY MANAGEMENT\n");
@@ -96,5 +97,6 @@ int main() {
         }
         printf("\n--------------------------------------\n");
     }
-    return 0;
+
+    end: return 0;
 }
