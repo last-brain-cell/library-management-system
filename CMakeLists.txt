@@ -10,4 +10,6 @@ add_executable(untitled main.c
         Auxilary_Files/logsystem.c
         headers/login.h
         Auxilary_Files/login.c
+        headers/demo_setup.h
+        Auxilary_Files/demo_setup.c
 )

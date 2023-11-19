@@ -30,7 +30,7 @@ int main() {
     printf("--------------------------------------\n");
     printf("\tLIBRARY MANAGEMENT\n");
     printf("--------------------------------------\n");
-    printf("\n1: Check in book\n2: Return book\n3: Display logs\n4: Insert Book into Library\n5: Check Availability of a Book\n6: Display Library\n7: Sign Out\n0: Exit\n\n");
+    printf("\n1: Check out book\n2: Return book\n3: Display logs\n4: Insert Book into Library\n5: Check Availability of a Book\n6: Display Library\n7: Sign Out\n0: Exit\n\n");
     printf("--------------------------------------\n");
 
     while (1) {
